@@ -1,24 +1,57 @@
-<!DOCTYPE html><html lang="en">
- <head>
-   <meta charset='utf-8'>
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>Social </title>
-   <meta name="description" content="">
-   <meta name="keywords" content="">
-   <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
-    <script src="libraries/p5.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
+<!-- link to database -->
+<!-- https://console.firebase.google.com/u/0/project/socialmediaproj-ea386/database/socialmediaproj-ea386/data/~2F -->
 
-  </head>
-  <body>
-    <!-- link to database -->
-    <!-- https://console.firebase.google.com/u/0/project/socialmediaproj-ea386/database/socialmediaproj-ea386/data/~2F -->
-    <script src="js/sketch.js"></script>
-    <script src="js/gotIt.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Social </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+  <script src="libraries/p5.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
 
+</head>
 
-</body></html>
+<body>
+
+  <script src="js/sketch.js"></script>
+  <script src="js/gotIt.js"></script>
+  <script src="js/fortune.js"></script>
+
+  <div class="smartphone">
+    <div class="content">
+      <h3> Capture New Discoveries! </h3>
+
+      <div class="" id="sendDiv">
+        <textarea id="messageInput" name="name" rows="2" cols="46" placeholder="Item Name"></textarea>
+        <textarea id="messageInput2" name="name" rows="2" cols="46" placeholder="Price"></textarea>
+        <button id="sendMessageBtn" type="button" name="button"> Upload Discovery</button>
+
+        <p>
+          <ol id ="discovery">
+
+          </ol>
+        </p>
+        <input type="text" id="searchItem" value=""placeholder="Search">
+        <button id="receiveMessageBtn" type="button" name="button"> Search Discoveries</button>
+        <p id="receivedMessage"></p>
+        <!-- <button id="sendAgainBtn" class="hidden" type="button" name="button"> Send another message</button> -->
+      </div>
+
+      <div class="hidden" id="receiveDiv">
+        <button id="receiveMessageBtn" type="button" name="button"> receive message</button>
+        <p id="receivedMessage"></p>
+        <!-- <button id="sendAgainBtn" class="hidden" type="button" name="button"> Send another message</button> -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
