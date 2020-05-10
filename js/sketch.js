@@ -74,10 +74,10 @@ function sendMessage() {
     //pushes to fixbase!
     createNode(folderName, timestamp, nodeData);
 
-    createP(`sent message: ${nodeData.name}`);
-    createP(`sent message: ${nodeData.price}`);
+    // createP(`sent message: ${nodeData.name}`);
+    // createP(`sent message: ${nodeData.price}`);
 
-    var li = createElement('li', nodeData.name + ' $'+ nodeData.price);
+    var li = createElement('li', nodeData.name + ' $' + nodeData.price);
     li.parent('discovery');
 
     //zeo out text box
@@ -102,44 +102,23 @@ function receiveMessage() {
   let lookup = document.querySelector("#searchItem").value;
   console.log(lookup)
   for (let i = 0; i < fbDataArray.length; i++) {
-    if(fbDataArray[i].name === lookup){
+    if (fbDataArray[i].name === lookup) {
       console.log("received");
-      receivedMessage.innerHTML = fbDataArray[i].name + " " + fbDataArray[i].price;
+      receivedMessage.innerHTML = fbDataArray[i].name + " $" + fbDataArray[i].price;
       receiveMessageBtn.style.display = 'block';
       //sendAgainBtn.style.display = 'block';
       found = true;
       break;
     }
-    // if (fbDataArray[i].received === false) {
-    //   console.log("recieved");
-    //   receivedMessage.innerHTML = fbDataArray[i].name;
-    //   updateNode(folderName, fbDataArray[i].timestamp, {
-    //     received: true
-    //   });
-    //   receiveMessageBtn.style.display = 'none';
-    //   sendAgainBtn.style.display = 'block';
-    //   break;
-    // } else {
-    //   receivedMessage.innerHTML = "No messages";
-    //   //console.log("no more messages");
-    // }
+
   }
-  if(found == false) {
-   receivedMessage.innerHTML = 'Not yet discovered!';
+  if (found == false) {
+    receivedMessage.innerHTML = 'Not yet discovered!';
     console.log("not found");
   }
 }
 
-// function sendAgain() {
-//   // reset receive div
-//   receivedMessage.innerHTML = "";
-//   receiveMessageBtn.style.display = 'block';
-//   sendAgainBtn.style.display = 'none';
-//
-//   receiveDiv.style.display = 'none';
-//   sendDiv.style.display = 'block';
-//
-// }
+
 
 function shuffleArray(_array) {
   //iterate backwards thrrough an array
